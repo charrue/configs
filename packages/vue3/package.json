@@ -6,7 +6,7 @@
   "homepage": "https://github.com/charrue/configs/blob/master/packages/vue3/README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/charrue/config.git",
+    "url": "https://github.com/charrue/configs.git",
     "directory": "packages/vue3"
   },
   "publishConfig": {
