@@ -25,7 +25,7 @@ importers:
 
   packages/vue2:
     specifiers:
-      '@charrue/eslint-config-vue-base': workspace:*
+      '@charrue/eslint-config-vue-base': workspace:latest
     dependencies:
       '@charrue/eslint-config-vue-base': link:../vue-base
 
