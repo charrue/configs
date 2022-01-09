@@ -2,7 +2,6 @@ module.exports = {
   rules: {
     "vue/block-lang": "warn",
     "vue/block-tag-newline": "error",
-    "vue/component-api-style": "warn",
     // 模板中的自定义组件需要使用 kebab-case 格式
     "vue/component-name-in-template-casing": [
       "error",
