@@ -1,7 +1,7 @@
 ![](https://img.shields.io/npm/v/@charrue/eslint-config-base.svg)![](https://img.shields.io/npm/dt/@charrue/eslint-config-base.svg)![](https://img.shields.io/npm/l/express.svg)
 
 
-# @charrue/eslint-base-config
+# @charrue/eslint-config-base
 
 此规则是参考[eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)实现的。
 
@@ -13,23 +13,20 @@
 
 ```bash
 # npm
-npm install @charrue/esling-config-base
+npm install @charrue/eslint-config-base
 
 # yarn
-yarn add @charrue/esling-config-base
+yarn add @charrue/eslint-config-base
 
 # pnpm
-pnpm add @charrue/esling-config-base
+pnpm add @charrue/eslint-config-base
 ```
 
 
 
 ### 配置
 
-Use `.eslintrc.*` file to configure rules. 
-
-Example **.eslintrc.js**:
-
+使用`.eslintrc.js`进行规则配置
 ```js
 module.exports = {
   root: true,

@@ -3,9 +3,11 @@
 
 
 - [x] eslint-config-base
-- [ ] eslint-config-vue
+- [x] eslint-config-vue-base
+- [x] eslint-config-vue2
 - [ ] eslint-config-vue3
-- [ ] eslint-config-typesript
+- [ ] eslint-config-typescript
+- [ ] eslint-config-prettier
 
 
 
