@@ -7,9 +7,7 @@ const rules = {
   "arrow-body-style": [
     "error",
     "as-needed",
-    {
-      requireReturnForObjectLiteral: true,
-    },
+    { requireReturnForObjectLiteral: true },
   ],
 
   /**
@@ -40,12 +38,7 @@ const rules = {
   /**
    * 禁止在可能与比较操作符相混淆的地方使用箭头函数
    */
-  "no-confusing-arrow": [
-    "error",
-    {
-      allowParens: true,
-    },
-  ],
+  "no-confusing-arrow": ["error", { allowParens: true }],
 
   /**
    * 禁止修改 const 声明的变量
@@ -162,9 +155,7 @@ const rules = {
         object: false,
       },
     },
-    {
-      enforceForRenamedProperties: false,
-    },
+    { enforceForRenamedProperties: false },
   ],
 
   /**

@@ -57,8 +57,6 @@ const rules = {
 };
 
 module.exports = {
-  env: {
-    node: true,
-  },
+  env: { node: true },
   rules,
 };

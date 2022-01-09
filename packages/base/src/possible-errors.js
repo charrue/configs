@@ -151,7 +151,7 @@ module.exports = {
     /**
      * 禁用稀疏数组
      */
-    "no-sparse-arrays": "error",
+    "no-sparse-arrays": "warn",
 
     /**
      * 禁止在常规字符串中出现模板字面量占位符语法
@@ -169,12 +169,7 @@ module.exports = {
      * TODO
      * 禁止在 finally 语句块中出现控制流语句
      */
-    "no-unreachable-loop": [
-      "error",
-      {
-        ignore: [],
-      },
-    ],
+    "no-unreachable-loop": ["error", { ignore: [] }],
 
     /**
      * 禁止对关系运算符的左操作数使用否定操作符

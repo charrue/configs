@@ -25,12 +25,7 @@ module.exports = {
     /**
      * 如果类中的方法没有使用this，则可以替换为静态方法使用
      */
-    "class-methods-use-this": [
-      "error",
-      {
-        exceptMethods: [],
-      },
-    ],
+    "class-methods-use-this": ["error", { exceptMethods: [] }],
 
     /**
      * 代码的圈复杂度最多为20
@@ -224,12 +219,7 @@ module.exports = {
     /**
      * 禁止使用多个空格
      */
-    "no-multi-spaces": [
-      "error",
-      {
-        ignoreEOLComments: false,
-      },
-    ],
+    "no-multi-spaces": ["error", { ignoreEOLComments: false }],
 
     /**
      * 禁止使用多行字符串
@@ -366,12 +356,7 @@ module.exports = {
     /**
      * 禁止自我赋值
      */
-    "no-self-assign": [
-      "error",
-      {
-        props: true,
-      },
-    ],
+    "no-self-assign": ["error", { props: true }],
 
     /**
      * 禁止自身比较
@@ -423,7 +408,7 @@ module.exports = {
     /**
      * 禁止不必要的字符串字面量或模板字面量的连接
      */
-    "no-useless-concat": "error",
+    "no-useless-concat": "warn",
 
     /**
      * 禁用不必要的转义字符

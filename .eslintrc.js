@@ -1,3 +1,1 @@
-module.exports = {
-  extends: ["./packages/base/index.js"],
-};
+module.exports = { extends: ["./packages/base/index.js"] };

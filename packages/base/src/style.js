@@ -219,9 +219,7 @@ module.exports = {
           parameters: 1,
           body: 1,
         },
-        CallExpression: {
-          arguments: 1,
-        },
+        CallExpression: { arguments: 1 },
         ArrayExpression: 1,
         ObjectExpression: 1,
         ImportDeclaration: 1,
@@ -576,15 +574,7 @@ module.exports = {
     ],
 
     // TODO
-    "object-curly-newline": [
-      "error",
-      {
-        ObjectExpression: { minProperties: 4, multiline: true, consistent: true },
-        ObjectPattern: { minProperties: 4, multiline: true, consistent: true },
-        ImportDeclaration: { minProperties: 4, multiline: true, consistent: true },
-        ExportDeclaration: { minProperties: 4, multiline: true, consistent: true },
-      },
-    ],
+    "object-curly-newline": ["error", { multiline: true }],
 
     /**
      * 花括号之间需要有空格
@@ -594,12 +584,7 @@ module.exports = {
     /**
      * 不能把对象的属性声明在同一行中
      */
-    "object-property-newline": [
-      "error",
-      {
-        allowAllPropertiesOnSameLine: true,
-      },
-    ],
+    "object-property-newline": ["error", { allowAllPropertiesOnSameLine: true }],
 
     /**
      * 不能用一个关键字，声明多个变量
@@ -635,9 +620,7 @@ module.exports = {
         classes: "never",
         switches: "never",
       },
-      {
-        allowSingleLineBlocks: true,
-      },
+      { allowSingleLineBlocks: true },
     ],
 
     /**
@@ -732,8 +715,7 @@ module.exports = {
       {
         words: true,
         nonwords: false,
-        overrides: {
-        },
+        overrides: {},
       },
     ],
 
