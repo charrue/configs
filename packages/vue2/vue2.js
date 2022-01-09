@@ -1,14 +1,4 @@
 module.exports = {
-  plugin: ["vue"],
-  extends: [
-    "./base.js",
-    "./no-layout-rules.js",
-    "./recommended.js",
-    "./strongly-recommended.js",
-    "./strongly-recommended.js",
-    "./uncategorized.js",
-    "./vue2-essential.js",
-  ],
   rules: {
     // 不能在v-model上使用自定义修饰符
     "vue/no-custom-modifiers-on-v-model": "error",

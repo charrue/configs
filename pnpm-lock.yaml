@@ -14,33 +14,34 @@ importers:
     devDependencies:
       eslint: 8.6.0
 
-  packages/vue:
+  packages/vue-base:
     specifiers:
-      '@babel/eslint-parser': ^7.16.5
       eslint: ^8.6.0
       eslint-plugin-vue: ^8.2.0
-      vue-eslint-parser: ^8.0.1
     dependencies:
-      '@babel/eslint-parser': 7.16.5_eslint@8.6.0
       eslint-plugin-vue: 8.2.0_eslint@8.6.0
-      vue-eslint-parser: 8.0.1_eslint@8.6.0
+    devDependencies:
+      eslint: 8.6.0
+
+  packages/vue2:
+    specifiers:
+      '@charrue/eslint-config-vue-base': workspace:*
+      eslint: ^8.6.0
+    dependencies:
+      '@charrue/eslint-config-vue-base': link:../vue-base
+    devDependencies:
+      eslint: 8.6.0
+
+  packages/vue3:
+    specifiers:
+      '@charrue/eslint-config-vue-base': workspace:*
+      eslint: ^8.6.0
+    dependencies:
+      '@charrue/eslint-config-vue-base': link:../vue-base
     devDependencies:
       eslint: 8.6.0
 
 packages:
-
-  /@babel/eslint-parser/7.16.5_eslint@8.6.0:
-    resolution: {integrity: sha512-mUqYa46lgWqHKQ33Q6LNCGp/wPR3eqOYTUixHFsfrSQqRxH0+WOzca75iEjFr5RDGH1dDz622LaHhLOzOuQRUA==}
-    engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
-    peerDependencies:
-      '@babel/core': '>=7.11.0'
-      eslint: ^7.5.0 || ^8.0.0
-    dependencies:
-      eslint: 8.6.0
-      eslint-scope: 5.1.1
-      eslint-visitor-keys: 2.1.0
-      semver: 6.3.0
-    dev: false
 
   /@eslint/eslintrc/1.0.5:
     resolution: {integrity: sha512-BLxsnmK3KyPunz5wmCCpqy0YelEoxxGmH73Is+Z74oOTMtExcjkr3dDR6quwrjh1YspA8DH9gnX1o069KiS9AQ==}
@@ -213,14 +214,6 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-scope/5.1.1:
-    resolution: {integrity: sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==}
-    engines: {node: '>=8.0.0'}
-    dependencies:
-      esrecurse: 4.3.0
-      estraverse: 4.3.0
-    dev: false
-
   /eslint-scope/6.0.0:
     resolution: {integrity: sha512-uRDL9MWmQCkaFus8RF5K9/L/2fn+80yoW3jkD53l4shjCh26fCtvJGasxjUqP5OT87SYTxCVA3BwTUzuELx9kA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -320,11 +313,6 @@ packages:
     engines: {node: '>=4.0'}
     dependencies:
       estraverse: 5.3.0
-
-  /estraverse/4.3.0:
-    resolution: {integrity: sha512-39nnKffWz8xN1BU/2c79n9nB9HDzo0niYUqx6xyqUnyoAnQyyWpOTdZEeiCch8BBu515t4wp9ZmgVfVhn9EBpw==}
-    engines: {node: '>=4.0'}
-    dev: false
 
   /estraverse/5.3.0:
     resolution: {integrity: sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==}
@@ -564,11 +552,6 @@ packages:
     dependencies:
       glob: 7.2.0
     dev: true
-
-  /semver/6.3.0:
-    resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
-    hasBin: true
-    dev: false
 
   /semver/7.3.5:
     resolution: {integrity: sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==}

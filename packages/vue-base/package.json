@@ -1,0 +1,30 @@
+{
+  "name": "@charrue/eslint-config-vue-base",
+  "version": "0.1.3",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://github.com/charrue/configs/blob/master/packages/vue-base/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charrue/config.git",
+    "directory": "packages/vue-base"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "keywords": [
+    "eslint",
+    "linter",
+    "vue",
+    "charrue"
+  ],
+  "author": "ckangwen",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.6.0"
+  },
+  "dependencies": {
+    "eslint-plugin-vue": "^8.2.0"
+  }
+}

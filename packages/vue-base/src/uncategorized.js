@@ -97,8 +97,6 @@ module.exports = {
     "vue/no-useless-mustaches": "error",
     // 避免不必要的v-bind
     "vue/no-useless-v-bind": "error",
-    // 避免不必要的v-text
-    "vue/no-useless-v-text": "error",
     // <template> <script> <style> 这些标签之间需要有两个空格
     "vue/padding-line-between-blocks": ["error", "always"],
     // 静态类型应该和动态类名独立开来
