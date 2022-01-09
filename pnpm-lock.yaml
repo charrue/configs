@@ -26,20 +26,14 @@ importers:
   packages/vue2:
     specifiers:
       '@charrue/eslint-config-vue-base': workspace:*
-      eslint: ^8.6.0
     dependencies:
       '@charrue/eslint-config-vue-base': link:../vue-base
-    devDependencies:
-      eslint: 8.6.0
 
   packages/vue3:
     specifiers:
       '@charrue/eslint-config-vue-base': workspace:*
-      eslint: ^8.6.0
     dependencies:
       '@charrue/eslint-config-vue-base': link:../vue-base
-    devDependencies:
-      eslint: 8.6.0
 
 packages:
 

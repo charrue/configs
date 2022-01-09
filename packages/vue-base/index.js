@@ -1,5 +1,4 @@
 module.exports = {
-  plugins: ["vue"],
   extends: [
     "./src/base.js",
     "./src/no-layout-rules.js",
