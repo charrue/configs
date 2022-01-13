@@ -1,6 +1,6 @@
 {
   "name": "@charrue/eslint-config-vue-base",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "",
   "main": "index.js",
   "homepage": "https://github.com/charrue/configs/blob/master/packages/vue-base/README.md",
