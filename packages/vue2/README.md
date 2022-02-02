@@ -3,7 +3,7 @@
 
 # @charrue/eslint-config-vue2
 
-此规则是基于[eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue)实现的，覆盖其原有的rules。
+此规则是基于[eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue)实现的，仅是覆盖其原有的rules。
 
 
 ## 使用
@@ -42,5 +42,7 @@ module.exports = {
   }
 }
 ```
-> `@charrue/eslint-config-vue2`需要使用`@babel/eslint-parser`进行文件解析，并且项目内`eslint-plugin-vue`的版本需要在`7.2.0`以上，因为有些vue的rule只有在`7.2.0`版本才会提供
+> `@charrue/eslint-config-vue2`需要使用`@babel/eslint-parser`进行文件解析，并且`eslint`的版本不能是`8.x`，否则会出现`Syntax Error: TypeError: eslint.CLIEngine is not a constructor`的问题，详见[Issue #15175](https://github.com/eslint/eslint/issues/15175)。
+>
+> eslint可以使用`7.x`的版本如`^7.3.0`。
 

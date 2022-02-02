@@ -2,12 +2,11 @@
 export default {
   name: "TodoApp",
   data() {
-    return {
-      todoItems: [],
-    };
+    return { todoItems: [] };
   },
 };
 </script>
+
 <style>
 .todo-item {
   background-color: #eef;

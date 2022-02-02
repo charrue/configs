@@ -80,7 +80,7 @@ module.exports = {
     "vue/valid-v-show": "error",
     // 检测v-show的不规范使用
     "vue/valid-v-slot": "error",
-    // 检测v-textk的不规范使用
+    // 检测v-text的不规范使用
     "vue/valid-v-text": "error",
   },
 };

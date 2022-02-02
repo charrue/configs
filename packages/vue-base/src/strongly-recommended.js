@@ -85,7 +85,7 @@ module.exports = {
     // 组件的属性需要使用驼峰式命名
     "vue/prop-name-casing": ["error", "camelCase"],
     // 未标记为必须的属性，应该具备一个默认值
-    "vue/require-default-prop": "warn",
+    "vue/require-default-prop": "off",
     // 组件的属性都要有类型声明
     "vue/require-prop-types": "warn",
     // 在单行元素的内容之前和之后需要强制换行

@@ -40,7 +40,7 @@ module.exports = {
     "vue/next-tick-style": "off",
     // 可以在模板中直接使用字符串
     "vue/no-bare-strings-in-template": "off",
-    "vue/no-boolean-default": ["error", "default-false"],
+    "vue/no-boolean-default": "off",
     // 使用v-text或v-html时，不能带子元素
     "vue/no-child-content": "error",
     "vue/no-duplicate-attr-inheritance": "off",
