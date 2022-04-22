@@ -77,7 +77,9 @@ module.exports = {
      */
     "no-label-var": "error",
 
-    // TODO
+    /**
+     * 全局范围内禁用`isFinite`和`isNaN`
+     */
     "no-restricted-globals": [
       "error",
       {

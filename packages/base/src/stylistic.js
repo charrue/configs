@@ -2,53 +2,42 @@ module.exports = {
   rules: {
 
     /**
-     * 在数组开括号后和闭括号前强制换行
      * 如果数组元素内或元素间有换行，则要求换行
-     * https://cn.eslint.org/docs/rules/array-bracket-newline
+     * 与airbnb不同
      */
     "array-bracket-newline": ["warn", { multiline: true }],
 
     /**
      * 在数组括号内使用一个或多个空格、或折行
-     * https://cn.eslint.org/docs/rules/array-bracket-spacing
+     * 如果数组内只有一个元素，则两侧方括号需要留有空格
+     * 如果数组两侧的方括号，与数组内的数组相邻(即`[ [` 或 `] ]`)，则两侧方括号需要留有空格
+     * 与airbnb不同
      */
-    "array-bracket-spacing": ["warn", "never"],
+    "array-bracket-spacing": ["warn", "never", { arraysInArrays: true, singleValue: true }],
 
     /**
-     * https://cn.eslint.org/docs/rules/array-element-newline
-     * 强制数组元素间出现换行
-     * 只有在数组元素大于等于3个时候，才需要换行
+     * 如果数组元素中间有换行，则要求全部换行
+     * 与airbnb不同
      */
-    "array-element-newline": ["warn", { multiline: true, minItems: 3 }],
+    "array-element-newline": ["warn", "consistent", { multiline: true }],
 
     /**
-     * 禁止或强制在代码块中开括号前和闭括号后有空格
-     * https://cn.eslint.org/docs/rules/block-spacing
+     * 要求在代码块中左花括号后面和右花括号前面，留有空格
      */
     "block-spacing": ["error", "always"],
 
     /**
-     * 大括号风格要求
-     * https://cn.eslint.org/docs/rules/brace-style
-     * 将大括号放在控制语句或声明语句同一行的位置
+     * 需要将大括号放在控制语句或声明语句同一行的位置
      */
-    "brace-style": [
-      "error",
-      "1tbs",
-      { allowSingleLine: true },
-    ],
+    "brace-style": ["error", "1tbs", { allowSingleLine: true }],
 
     /**
-     * 要求使用骆驼拼写法
-     * https://cn.eslint.org/docs/rules/camelcase
-     * 不检查属性名称,不检查解构标识符
+     * 不检查属性名称的骆驼拼,不检查解构标识符的骆驼拼写
      */
     camelcase: ["error", { properties: "never", ignoreDestructuring: false }],
 
     /**
-     * 强制或禁止对注释的第一个字母大写
-     * https://cn.eslint.org/docs/rules/capitalized-comments
-     * 不会对大小写有任何的限制
+     * 对注释的首字母大小写没有任何的限制
      */
     "capitalized-comments": [
       "off",
@@ -68,8 +57,6 @@ module.exports = {
     ],
 
     /**
-     * 要求或禁止使用拖尾逗号
-     * https://cn.eslint.org/docs/rules/comma-dangle
      * 对于数组、对象、ES模块的import声明、export声明、函数声明都需要加上拖尾逗号
      */
     "comma-dangle": [
@@ -84,15 +71,11 @@ module.exports = {
     ],
 
     /**
-     * 强制在逗号周围使用空格
-     * https://cn.eslint.org/docs/rules/comma-spacing
      * 禁止在逗号前使用空格,要求在逗号后使用一个或多个空格
      */
     "comma-spacing": ["error", { before: false, after: true }],
 
     /**
-     * 逗号风格
-     * https://cn.eslint.org/docs/rules/comma-style
      * 要求逗号放在数组元素、对象属性或变量声明之后，且在同一行
      */
     "comma-style": [
@@ -116,36 +99,26 @@ module.exports = {
     ],
 
     /**
-     * 禁止或强制在计算属性中使用空格
-     * https://cn.eslint.org/docs/rules/computed-property-spacing
-     * 禁止在计算属性中使用空格
+     * 禁止在计算属性(`obj[prop]`)中使用空格
      */
     "computed-property-spacing": ["error", "never"],
 
     /**
-     * 要求一致的 This
-     * https://cn.eslint.org/docs/rules/consistent-this
      * 可以使用this别名
      */
     "consistent-this": "off",
 
     /**
-     * 要求或禁止文件末尾保留一行空行
-     * https://cn.eslint.org/docs/rules/eol-last
-     * 要求文件末尾使用换行
+     * 要求文件末尾留有换行
      */
     "eol-last": ["error", "always"],
 
     /**
-     * 要求或禁止在函数标识符和其调用之间有空格
-     * https://cn.eslint.org/docs/rules/func-call-spacing
      * 在函数名和开括号之间不需要存在空格
      */
     "func-call-spacing": ["error", "never"],
 
     /**
-     * 要求函数名与赋值给它们的变量名或属性名相匹配
-     * https://cn.eslint.org/docs/rules/func-name-matching
      * 函数名与赋值给它们的变量名或属性名不需要相匹配
      */
     "func-name-matching": [
@@ -158,44 +131,40 @@ module.exports = {
     ],
 
     /**
-     * 要求或禁止命名的 function 表达式
-     * https://cn.eslint.org/docs/rules/func-names
      * 函数表达式需要加上name
      */
     "func-names": ["off", "as-needed"],
 
     /**
-     * 强制 function 声明或表达式的一致性
-     * https://cn.eslint.org/docs/rules/func-style
-     * 要求使用函数表达式而不是函数声明
+     * 对于函数的定义，需要使用函数表达式而不是函数声明
+     * 与airbnb不同
      */
-    "func-style": ["off", "expression"],
+    "func-style": ["warn", "expression"],
 
     /**
-     * TODO
-     * 强制在函数括号内使用一致的换行
-     * https://cn.eslint.org/docs/rules/function-paren-newline
-     * 要求每个括号使用一致的换行。如果一个括号有换行，另一个括号没有换行，则报错
+     * 要求在函数括号的参数，使用一致的换行
+     * 如果函数括号内只有一个参数，则禁止换行
+     * 与airbnb不同
      */
-    "function-paren-newline": ["error", "consistent"],
+    "function-paren-newline": ["error", "multiline"],
 
     /**
-     * 禁用指定的标识符
+     * 不会禁用特定的标识符(变量命名)
      */
     "id-blacklist": "off",
 
     /**
-     * 强制标识符的最小和最大长度
+     * 不会限制标识符命名长度
      */
     "id-length": "off",
 
     /**
-     * 要求标识符匹配一个指定的正则表达式
+     * 对标识符命名无特殊格式要求
      */
     "id-match": "off",
 
     /**
-     * 禁止在箭头函数体之前出现换行
+     * 要求在箭头函数体之前出现换行
      */
     "implicit-arrow-linebreak": ["error", "beside"],
 
@@ -225,25 +194,7 @@ module.exports = {
         ImportDeclaration: 1,
         flatTernaryExpressions: false,
 
-        // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
-        ignoredNodes: [
-          "JSXElement",
-          "JSXElement > *",
-          "JSXAttribute",
-          "JSXIdentifier",
-          "JSXNamespacedName",
-          "JSXMemberExpression",
-          "JSXSpreadAttribute",
-          "JSXExpressionContainer",
-          "JSXOpeningElement",
-          "JSXClosingElement",
-          "JSXFragment",
-          "JSXOpeningFragment",
-          "JSXClosingFragment",
-          "JSXText",
-          "JSXEmptyExpression",
-          "JSXSpreadChild",
-        ],
+        ignoredNodes: ["JSXElement", "JSXElement > *", "JSXAttribute", "JSXIdentifier", "JSXNamespacedName", "JSXMemberExpression", "JSXSpreadAttribute", "JSXExpressionContainer", "JSXOpeningElement", "JSXClosingElement", "JSXFragment", "JSXOpeningFragment", "JSXClosingFragment", "JSXText", "JSXEmptyExpression", "JSXSpreadChild"],
         ignoreComments: false,
       },
     ],
@@ -254,14 +205,13 @@ module.exports = {
     "jsx-quotes": ["error", "prefer-double"],
 
     /**
-     * 对象字面量的键和冒号之间不要存在空格
-     * 在对象字面量的冒号和值之间只存在有一个空格
+     * 对象字面量的键名和`:`之间不要存在空格
+     * 在对象字面量的值和`:`之间需要留有一个空格
      */
     "key-spacing": ["error", { beforeColon: false, afterColon: true }],
 
     /**
-     * 在关键字之前至少有一个空格
-     * 要求在关键字之后至少有一个空格
+     * 在关键字的前后至少有一个空格
      * return、throw、case 后面至少有一个空格
      */
     "keyword-spacing": [
@@ -278,7 +228,7 @@ module.exports = {
     ],
 
     /**
-     * 强制行注释只在代码上方，单独成行
+     * 行注释的位置可以在代码上方，也可以在代码行后面
      */
     "line-comment-position": [
       "off",
@@ -288,23 +238,21 @@ module.exports = {
         applyDefaultPatterns: true,
       },
     ],
+    /**
+     * 对换行符使用`LF`还是`CRLF`没有要求
+     * 与airbnb不同
+     */
     "linebreak-style": "off",
 
     /**
-     * 在块级注释之前需要有一空行
+     * 对注释周围是否要有空行没有要求
      */
-    "lines-around-comment": [
-      "off",
-      {
-        beforeLineComment: false,
-        beforeBlockComment: true,
-      },
-    ],
+    "lines-around-comment": [ "off" ],
 
     /**
-     * 要求在类成员之后有一行空行
+     * 类的方法之间需要留有一个空行
      */
-    "lines-between-class-members": ["warn", "always"],
+    "lines-between-class-members": ["error", "always", { exceptAfterSingleLine: false }],
 
     /**
      * 块语句的最大可嵌套深度为4层
@@ -312,7 +260,7 @@ module.exports = {
     "max-depth": ["off", 4],
 
     /**
-     * 单行最大100个字符
+     * 单行最多有100个字符
      */
     "max-len": [
       "error",
@@ -328,7 +276,8 @@ module.exports = {
     ],
 
     /**
-     * 忽略空行与注释，一个文件最多500行
+     * 忽略空行与注释，一个文件最多只能有700行
+     * 与airbnb不同
      */
     "max-lines": [
       "warn",
@@ -340,10 +289,10 @@ module.exports = {
     ],
 
     /**
-     * 忽略空行与注释，一个函数最多50行
+     * 对函数的行数不限制
      */
     "max-lines-per-function": [
-      "warn",
+      "off",
       {
         max: 100,
         skipBlankLines: true,
@@ -363,7 +312,8 @@ module.exports = {
     "max-params": ["warn", { max: 5 }],
 
     /**
-     * 函数块中最多定义20个语句
+     * 一个函数体内最多只能存在20个变量声明
+     * 与airbnb不同
      */
     "max-statements": ["warn", 20],
 
@@ -373,14 +323,15 @@ module.exports = {
     "max-statements-per-line": ["warn", { max: 1 }],
 
     /**
-     * 块级注释的每行之前有一个 *
+     * 不要求在块级注释的前必须携带`*`
      */
     "multiline-comment-style": ["off", "starred-block"],
 
     /**
      * 三元表达式要么都在同一行，要么在三元操作数之间进行换行
+     * 与airbnb不同
      */
-    "multiline-ternary": ["off", "always-multiline"],
+    "multiline-ternary": ["warn", "always-multiline"],
 
     /**
      * 要求构造函数首字母大写
@@ -391,11 +342,7 @@ module.exports = {
         newIsCap: true,
         newIsCapExceptions: [],
         capIsNew: false,
-        capIsNewExceptions: [
-          "Immutable.Map",
-          "Immutable.Set",
-          "Immutable.List",
-        ],
+        capIsNewExceptions: ["Immutable.Map", "Immutable.Set", "Immutable.List"],
       },
     ],
 
@@ -405,9 +352,9 @@ module.exports = {
     "new-parens": "error",
 
     /**
-     * 方法链中如果调用数量超过了2个，就需要换行
+     * 方法链中如果调用数量超过了4个，就需要换行
      */
-    "newline-per-chained-call": ["error", { ignoreChainWithDepth: 2 }],
+    "newline-per-chained-call": ["error", { ignoreChainWithDepth: 4 }],
 
     /**
      * 禁止使用Array构造函数
@@ -445,28 +392,7 @@ module.exports = {
          * the list of arithmetic groups disallows mixing `%` and `**`
          * with other arithmetic operators.
          */
-        groups: [
-          ["%", "**"],
-          ["%", "+"],
-          ["%", "-"],
-          ["%", "*"],
-          ["%", "/"],
-          ["/", "*"],
-          [
-            "&",
-            "|",
-            "<<",
-            ">>",
-            ">>>",
-          ],
-          [
-            "==",
-            "!=",
-            "===",
-            "!==",
-          ],
-          ["&&", "||"],
-        ],
+        groups: [ ["%", "**"], ["%", "+"], ["%", "-"], ["%", "*"], ["%", "/"], ["/", "*"], ["&", "|", "<<", ">>", ">>>"], ["==", "!=", "===", "!=="], ["&&", "||"] ],
         allowSamePrecedence: false,
       },
     ],
@@ -479,7 +405,7 @@ module.exports = {
     /**
      * 禁止连续赋值
      */
-    "no-multi-assign": ["error"],
+    "no-multi-assign": [ "error" ],
 
     /**
      * 最多连续空两行
@@ -502,10 +428,14 @@ module.exports = {
     "no-new-object": "error",
 
     /**
-     * 不限制使用 一元操作符 ++ 和 --
+     * 不允许使用 一元操作符 ++ 和 --
+     * 可以使用`i += n`代替
      */
-    "no-plusplus": "off",
+    "no-plusplus": "error",
 
+    /**
+     * 禁用 for in、for of、label、with语法
+     */
     "no-restricted-syntax": [
       "error",
       {
@@ -526,12 +456,18 @@ module.exports = {
       },
     ],
 
+    /**
+     * 不允许使用tab
+     */
     "no-tabs": "error",
 
+    /**
+     * 对三元操作符的使用无限制
+     */
     "no-ternary": "off",
 
     /**
-     * 禁止在空行使用空白符,禁止在注释块中使用空白符
+     * 禁止在空行使用空白符，禁止在注释块中使用空白符
      */
     "no-trailing-spaces": [
       "error",
@@ -542,7 +478,7 @@ module.exports = {
     ],
 
     /**
-     * 禁止标识符中有悬空下划线
+     * 禁止标识符中有悬空下划线(_foo)
      */
     "no-underscore-dangle": [
       "error",
@@ -555,26 +491,31 @@ module.exports = {
     ],
 
     /**
-     * 使用更简单的结构来代替三元操作符
+     * 尽量使用更简单的结构来代替三元操作符
      */
     "no-unneeded-ternary": ["error", { defaultAssignment: false }],
 
     /**
-     * 禁止属性前有空白
+     * 不允许在对象的点号(foo. bar)周围，或对象属性(foo [bar])之前的左括号前出现空白
      */
     "no-whitespace-before-property": "error",
 
     /**
-     * 禁止单行语句之前有换行
+     * 禁止单行语句之前有换行(if (foo) bar();)
      */
-    "nonblock-statement-body-position": [
-      "error",
-      "beside",
-      { overrides: {} },
-    ],
+    "nonblock-statement-body-position": ["error", "beside", { overrides: {} }],
 
-    // TODO
-    "object-curly-newline": ["error", { multiline: true }],
+    /**
+     * 在花括号内需要使用一致的换行
+     */
+    "object-curly-newline": [
+      "error", {
+        ObjectExpression: { minProperties: 4, multiline: true, consistent: true },
+        ObjectPattern: { minProperties: 4, multiline: true, consistent: true },
+        ImportDeclaration: { minProperties: 4, multiline: true, consistent: true },
+        ExportDeclaration: { minProperties: 4, multiline: true, consistent: true },
+      },
+    ],
 
     /**
      * 花括号之间需要有空格
@@ -604,11 +545,7 @@ module.exports = {
     /**
      * 当语句太长需要换行时，换行符放在操作符前面
      */
-    "operator-linebreak": [
-      "error",
-      "before",
-      { overrides: { "=": "none" } },
-    ],
+    "operator-linebreak": ["error", "before", { overrides: { "=": "none" } }],
 
     /**
      * 在块语句和类的开始和末尾，不要出现空行
@@ -624,9 +561,9 @@ module.exports = {
     ],
 
     /**
-     * 在特定语句中需要填充空行
+     * 对是否要在语句中需要填充空行无限制
      */
-    "padding-line-between-statements": ["off"],
+    "padding-line-between-statements": [ "off" ],
 
     /**
      * 禁止使用以对象字面量作为第一个参数的 Object.assign，优先使用对象扩展
@@ -639,7 +576,11 @@ module.exports = {
     "quote-props": [
       "error",
       "as-needed",
-      { keywords: false, unnecessary: true, numbers: false },
+      {
+        keywords: false,
+        unnecessary: true,
+        numbers: false,
+      },
     ],
 
     /**
@@ -669,11 +610,10 @@ module.exports = {
      */
     "semi-style": ["error", "last"],
 
-    "sort-keys": [
-      "off",
-      "asc",
-      { caseSensitive: false, natural: true },
-    ],
+    /**
+     * 无需对对象属性进行排序
+     */
+    "sort-keys": ["off", "asc", { caseSensitive: false, natural: true }],
 
     /**
      * 无需对声明的变量进行排序
@@ -728,20 +668,11 @@ module.exports = {
       {
         line: {
           exceptions: ["-", "+"],
-          markers: [
-            "=",
-            "!",
-            "/",
-          ],
+          markers: ["=", "!", "/"],
         },
         block: {
           exceptions: ["-", "+"],
-          markers: [
-            "=",
-            "!",
-            ":",
-            "::",
-          ],
+          markers: ["=", "!", ":", "::"],
           balanced: true,
         },
       },

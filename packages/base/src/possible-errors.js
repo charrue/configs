@@ -166,8 +166,7 @@ module.exports = {
     "no-unreachable": "error",
 
     /**
-     * TODO
-     * 禁止在 finally 语句块中出现控制流语句
+     * 禁止带有仅允许一次迭代的主体的循环(for循环一次后就break了)
      */
     "no-unreachable-loop": ["error", { ignore: [] }],
 
@@ -182,8 +181,7 @@ module.exports = {
     "no-unsafe-negation": "error",
 
     /**
-     * TODO
-     * 禁止由于 await 或 yield的使用而可能导致出现竞态条件的赋值
+     * 不要把awaited Promise直接作为值来使用，需要把他赋值给其他的变量后再使用
      */
     "require-atomic-updates": "off",
 

@@ -21,7 +21,7 @@ const rules = {
   "no-buffer-constructor": "error",
 
   /**
-   * TODO
+   * 对require的使用没有限制
    */
   "no-mixed-requires": ["off", false],
 

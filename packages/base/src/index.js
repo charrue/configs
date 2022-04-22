@@ -4,7 +4,7 @@ module.exports = {
     "./es6.js",
     "./node.js",
     "./possible-errors.js",
-    "./style.js",
+    "./stylistic.js",
     "./variables.js",
   ].map(require.resolve),
   parserOptions: {

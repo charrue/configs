@@ -1,8 +1,8 @@
 const rules = {
 
-  // TODO
   /**
    * 要求箭头函数体使用大括号，并显示返回对象字面量
+   * 与airbnb不同
    */
   "arrow-body-style": [
     "error",
@@ -61,8 +61,7 @@ const rules = {
   "no-new-symbol": "error",
 
   /**
-   * https://cn.eslint.org/docs/rules/no-restricted-imports
-   * TODO
+   * 对import的使用没有限制
    */
   "no-restricted-imports": [
     "off",
@@ -178,6 +177,9 @@ const rules = {
    */
   "prefer-template": "error",
 
+  /**
+   * generator函数内需要使用`yield`关键字
+   */
   "require-yield": "error",
 
   /**
@@ -186,11 +188,7 @@ const rules = {
   "rest-spread-spacing": ["error", "never"],
 
   /**
-   * 对于import的成员进行排序，忽略大小写
-   * 1. import 没有输出绑定的模块
-   * 2. import 所有输出绑定的成员
-   * 3. import 多个成员
-   * 4. import 单个成员
+   * 无需对import进行排序
    */
   "sort-imports": [
     "off",
@@ -218,7 +216,7 @@ const rules = {
   "template-curly-spacing": "error",
 
   /**
-   * 强制在 yield* 表达式中 * 周围使用空格
+   * 需要在 yield* 表达式中 `*` 周围使用空格
    */
   "yield-star-spacing": ["error", "after"],
 };

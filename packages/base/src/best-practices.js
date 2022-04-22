@@ -2,15 +2,9 @@ module.exports = {
   rules: {
 
     /**
-     * getter/setter需要成对出现在对象中
+     * 不要求 getter/setter需要成对出现在对象中
      */
-    "accessor-pairs": [
-      "error",
-      {
-        setWithoutGet: true,
-        getWithoutSet: true,
-      },
-    ],
+    "accessor-pairs": "off",
 
     /**
      * 数组方法的回调函数中需要有 return 语句
@@ -28,9 +22,9 @@ module.exports = {
     "class-methods-use-this": ["error", { exceptMethods: [] }],
 
     /**
-     * 代码的圈复杂度最多为20
+     * 对代码的圈复杂度无限制
      */
-    complexity: ["warn", 20],
+    complexity: ["off", 20],
 
     /**
      * 使用一致的 return 语句，不要有的返回了值，有的不返回值
@@ -72,9 +66,9 @@ module.exports = {
     "guard-for-in": "error",
 
     /**
-     * 一个文件中最多定义3个类
+     * 一个文件中最多定义1个类
      */
-    "max-classes-per-file": ["error", 3],
+    "max-classes-per-file": ["error", 1],
 
     /**
      * 禁用 alert、confirm 和 prompt
@@ -142,7 +136,7 @@ module.exports = {
     "no-extra-bind": "error",
 
     /**
-     * 禁用不必要的标签
+     * 禁用不必要的`label`
      */
     "no-extra-label": "error",
 
@@ -174,6 +168,9 @@ module.exports = {
       },
     ],
 
+    /**
+     * 不限制是否在全局范围内使用变量或函数声明
+     */
     "no-implicit-globals": "off",
 
     /**
@@ -205,9 +202,10 @@ module.exports = {
 
     /**
      * 代码中的没有明确含义的数字，最好有命名常量替代
+     * 与airbnb不同
      */
     "no-magic-numbers": [
-      "off",
+      "warn",
       {
         ignore: [],
         ignoreArrayIndexes: true,
@@ -222,12 +220,12 @@ module.exports = {
     "no-multi-spaces": ["error", { ignoreEOLComments: false }],
 
     /**
-     * 禁止使用多行字符串
+     * 禁止使用多行字符串(在 JavaScript 中，可以在新行之前使用斜线创建多行字符串)
      */
     "no-multi-str": "error",
 
     /**
-     * 禁止使用 new 以避免产生副作用
+     * 通过禁止使用 new 关键字调用构造函数但却不将结果赋值给一个变量
      */
     "no-new": "error",
 
@@ -284,7 +282,6 @@ module.exports = {
 
     /**
      * 禁止使用对象的某些属性
-     * TODO
      */
     "no-restricted-properties": [
       "error",
@@ -349,7 +346,7 @@ module.exports = {
     "no-return-await": "error",
 
     /**
-     * 禁止使用 javascript: url
+     * 禁止使用 `javascript: url`(javascript:void(0))
      */
     "no-script-url": "error",
 
@@ -364,7 +361,7 @@ module.exports = {
     "no-self-compare": "error",
 
     /**
-     * 禁用逗号操作符
+     * 禁用将逗号作为操作符使用
      */
     "no-sequences": "error",
 
@@ -391,7 +388,7 @@ module.exports = {
     ],
 
     /**
-     * 禁用出现未使用过的标签
+     * 禁用出现未使用过的label
      */
     "no-unused-labels": "error",
 
@@ -481,7 +478,7 @@ module.exports = {
     ],
 
     /**
-     * 要求或禁止 “Yoda” 条件
+     * 不允许出现条件判断中字面量在先而变量在第二的情况(if ("red" === color))
      */
     yoda: "error",
   },
