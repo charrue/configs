@@ -1,3 +1,6 @@
+const MAX_COMPLEXITY_NUM = 20;
+const MAX_CLASS_NUM_PER_FILE = 1;
+
 module.exports = {
   rules: {
 
@@ -24,7 +27,7 @@ module.exports = {
     /**
      * 对代码的圈复杂度无限制
      */
-    complexity: ["off", 20],
+    complexity: ["off", MAX_COMPLEXITY_NUM],
 
     /**
      * 使用一致的 return 语句，不要有的返回了值，有的不返回值
@@ -68,7 +71,7 @@ module.exports = {
     /**
      * 一个文件中最多定义1个类
      */
-    "max-classes-per-file": ["error", 1],
+    "max-classes-per-file": ["error", MAX_CLASS_NUM_PER_FILE],
 
     /**
      * 禁用 alert、confirm 和 prompt

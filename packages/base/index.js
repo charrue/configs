@@ -1,3 +1,1 @@
-module.exports = {
-  extends: ["./src/index.js"],
-};
+module.exports = { extends: [ "./src/index.js" ] };
