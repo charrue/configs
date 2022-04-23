@@ -30,5 +30,3 @@ module.exports = {
 ```
 
 ### 配置
-
-<br/>
