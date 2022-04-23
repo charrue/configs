@@ -1,0 +1,11 @@
+{
+  "name": "gen-doc",
+  "version": "0.0.1",
+  "description": "根据JSDOc生成ESLint的规则说明文档",
+  "dependencies": {
+    "jsdoc-api": "^7.1.1"
+  },
+  "bin": {
+    "gen-doc": "./command.js"
+  }
+}
