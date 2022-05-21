@@ -6,9 +6,9 @@ const rules = {
   "callback-return": "off",
 
   /**
-   * 要求 require() 出现在顶层模块作用域中
+   * 推荐 require() 出现在顶层模块作用域中，但是不会强制要求
    */
-  "global-require": "error",
+  "global-require": "off",
 
   /**
    * 不强制回调错误处理

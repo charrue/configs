@@ -79,7 +79,7 @@ const rules = {
   /**
    * 禁止在对象中使用不必要的计算属性
    */
-  "no-useless-computed-key": "error",
+  "no-useless-computed-key": "warn",
 
   /**
    * 禁用不必要的构造函数
@@ -119,13 +119,7 @@ const rules = {
   /**
    * 回调函数使用箭头函数，不能使用命名函数
    */
-  "prefer-arrow-callback": [
-    "error",
-    {
-      allowNamedFunctions: false,
-      allowUnboundThis: true,
-    },
-  ],
+  "prefer-arrow-callback": "off",
 
   /**
    * 要求使用 const 声明那些声明后不再被修改的变量

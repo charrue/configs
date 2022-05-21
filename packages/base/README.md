@@ -149,7 +149,7 @@ module.exports = {
 | 规则名称 | 规则描述 |
 |---|---|
 | callback-return | 不强制返回callback函数 |
-| global-require | 要求 require() 出现在顶层模块作用域中 |
+| global-require | 推荐 require() 出现在顶层模块作用域中，但是不会强制要求 |
 | handle-callback-err | 不强制回调错误处理 |
 | no-buffer-constructor | 禁用 Buffer() 构造函数 |
 | no-mixed-requires | 对require的使用没有限制 |
@@ -309,6 +309,6 @@ module.exports = {
 | no-undef | 禁用未声明的变量 |
 | no-undef-init | 禁止将变量初始化为 undefined |
 | no-undefined | 禁止将 undefined 作为标识符 |
-| no-unused-vars | 禁止出现未使用过的变量 |
+| no-unused-vars | 禁止出现未使用过的变量，除了以`_`开头的变量 |
 | no-use-before-define | 禁止在变量定义之前使用它们 |
 <br/>

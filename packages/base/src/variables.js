@@ -120,9 +120,19 @@ module.exports = {
     "no-undefined": "off",
 
     /**
-     * 禁止出现未使用过的变量
+     * 禁止出现未使用过的变量，除了以`_`开头的变量
      */
-    "no-unused-vars": ["error", { vars: "all", args: "after-used", ignoreRestSiblings: true }],
+    "no-unused-vars": [
+      "error",
+      {
+        vars: "all",
+        args: "after-used",
+        argsIgnorePattern: "^_",
+        ignoreRestSiblings: false,
+        varsIgnorePattern: "^_",
+      },
+    ],
+    // "no-unused-vars": ["error", { vars: "all", args: "after-used", ignoreRestSiblings: true }],
 
     /**
      * 禁止在变量定义之前使用它们
