@@ -63,7 +63,7 @@ module.exports = {
   rules: {
 
     /**
-     * 禁止使用var声明变量
+     * 在变量声明时需要赋予初始值
      */
     "init-declarations": "error",
 

@@ -210,7 +210,7 @@ module.exports = {
     "no-magic-numbers": [
       "warn",
       {
-        ignore: [],
+        ignore: [ 1 ],
         ignoreArrayIndexes: true,
         enforceConst: true,
         detectObjects: false,

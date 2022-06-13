@@ -136,10 +136,9 @@ module.exports = {
     "func-names": ["off", "as-needed"],
 
     /**
-     * 对于函数的定义，需要使用函数表达式而不是函数声明
-     * 与airbnb不同
+     * 对于函数的定义风格无要求
      */
-    "func-style": ["warn", "expression"],
+    "func-style": "off",
 
     /**
      * 要求在函数括号的参数，使用一致的换行

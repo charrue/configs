@@ -221,7 +221,7 @@ module.exports = {
 | func-call-spacing | 在函数名和开括号之间不需要存在空格 |
 | func-name-matching | 函数名与赋值给它们的变量名或属性名不需要相匹配 |
 | func-names | 函数表达式需要加上name |
-| func-style | 对于函数的定义，需要使用函数表达式而不是函数声明<br/>与airbnb不同 |
+| func-style | 对于函数的定义风格无要求 |
 | function-paren-newline | 要求在函数括号的参数，使用一致的换行<br/>如果函数括号内只有一个参数，则禁止换行<br/>与airbnb不同 |
 | id-blacklist | 不会禁用特定的标识符(变量命名) |
 | id-length | 不会限制标识符命名长度 |
@@ -300,7 +300,7 @@ module.exports = {
 
 | 规则名称 | 规则描述 |
 |---|---|
-| init-declarations | 禁止使用var声明变量 |
+| init-declarations | 在变量声明时需要赋予初始值 |
 | no-delete-var | 禁止delete 操作符的使用 |
 | no-label-var | 同一作用域下，不允许标签与变量同名 |
 | no-restricted-globals | 全局范围内禁用`isFinite`和`isNaN` |
