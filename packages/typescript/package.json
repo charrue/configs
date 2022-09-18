@@ -1,0 +1,33 @@
+{
+  "name": "@charrue/eslint-config-typescript",
+  "version": "0.1.6",
+  "description": "EsLint config for TypeScript",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charrue/configs.git",
+    "directory": "packages/typescript"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "keywords": [
+    "eslint",
+    "linter",
+    "charrue"
+  ],
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@charrue/eslint-config-base": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
+}
