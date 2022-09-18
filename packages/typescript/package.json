@@ -22,6 +22,10 @@
     "README.md"
   ],
   "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
+  }, 
   "dependencies": {
     "@charrue/eslint-config-base": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
