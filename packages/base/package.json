@@ -25,5 +25,8 @@
   },
   "scripts": {
     "docs": "gen-doc"
+  },
+  "dependencies": {
+    "eslint-plugin-import": "^2.26.0"
   }
 }

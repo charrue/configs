@@ -114,6 +114,11 @@ module.exports = {
     "no-func-assign": "error",
 
     /**
+     * 不允许使用失去精度的文字数字。
+     * 这可能会导致这些数字将在转换为 Number 类型时丢失，并导致意外行为。
+     */
+    "no-loss-of-precision": "error",
+    /**
      * 禁止在嵌套的块中出现变量声明或 function 声明
      */
     "no-inner-declarations": "error",
