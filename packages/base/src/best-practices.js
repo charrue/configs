@@ -207,15 +207,7 @@ module.exports = {
      * 代码中的没有明确含义的数字，最好有命名常量替代
      * 与airbnb不同
      */
-    "no-magic-numbers": [
-      "warn",
-      {
-        ignore: [ 1 ],
-        ignoreArrayIndexes: true,
-        enforceConst: true,
-        detectObjects: false,
-      },
-    ],
+    "no-magic-numbers": "off",
 
     /**
      * 禁止使用多个空格
