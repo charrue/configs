@@ -1,6 +1,6 @@
 {
   "name": "@charrue/eslint-config-base",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Charrue's base JS ESLint config",
   "main": "index.js",
   "homepage": "https://github.com/charrue/configs/blob/master/packages/base/README.md",
