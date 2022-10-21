@@ -275,13 +275,13 @@ module.exports = {
     ],
 
     /**
-     * 忽略空行与注释，一个文件最多只能有700行
+     * 忽略空行与注释，一个文件最多只能有1000行
      * 与airbnb不同
      */
     "max-lines": [
       "warn",
       {
-        max: 700,
+        max: 1000,
         skipBlankLines: true,
         skipComments: true,
       },
@@ -505,16 +505,9 @@ module.exports = {
     "nonblock-statement-body-position": ["error", "beside", { overrides: {} }],
 
     /**
-     * 在花括号内需要使用一致的换行
+     * 强制大括号内换行符的一致性
      */
-    "object-curly-newline": [
-      "error", {
-        ObjectExpression: { minProperties: 4, multiline: true, consistent: true },
-        ObjectPattern: { minProperties: 4, multiline: true, consistent: true },
-        ImportDeclaration: { minProperties: 4, multiline: true, consistent: true },
-        ExportDeclaration: { minProperties: 4, multiline: true, consistent: true },
-      },
-    ],
+    "object-curly-newline": "off",
 
     /**
      * 花括号之间需要有空格

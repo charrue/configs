@@ -35,7 +35,7 @@ module.exports = {
     /**
      * 禁用 console
      */
-    "no-console": "warn",
+    "no-console": ["warn", { allow: ["warn", "error"] }],
 
     /**
      * 禁止在条件判断中使用常量表达式

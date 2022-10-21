@@ -247,23 +247,7 @@ module.exports = {
     /**
      * 禁止对函数参数再赋值
      */
-    "no-param-reassign": [
-      "error",
-      {
-        props: true,
-        ignorePropertyModificationsFor: [
-          "acc",
-          "e",
-          "ctx",
-          "context",
-          "req",
-          "request",
-          "res",
-          "response",
-          "staticContext",
-        ],
-      },
-    ],
+    "no-param-reassign": "off",
 
     /**
      * 禁用 __proto__ 属性
