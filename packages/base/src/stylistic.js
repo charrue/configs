@@ -8,12 +8,9 @@ module.exports = {
     "array-bracket-newline": ["warn", { multiline: true }],
 
     /**
-     * 在数组括号内使用一个或多个空格、或折行
-     * 如果数组内只有一个元素，则两侧方括号需要留有空格
-     * 如果数组两侧的方括号，与数组内的数组相邻(即`[ [` 或 `] ]`)，则两侧方括号需要留有空格
-     * 与airbnb不同
+     * 数组方括号内部两侧无空格
      */
-    "array-bracket-spacing": ["warn", "never", { arraysInArrays: true, singleValue: true }],
+    "array-bracket-spacing": ["error", "never"],
 
     /**
      * 如果数组元素中间有换行，则要求全部换行
@@ -59,16 +56,7 @@ module.exports = {
     /**
      * 对于数组、对象、ES模块的import声明、export声明、函数声明都需要加上拖尾逗号
      */
-    "comma-dangle": [
-      "error",
-      {
-        arrays: "always-multiline",
-        objects: "always-multiline",
-        imports: "always-multiline",
-        exports: "always-multiline",
-        functions: "always-multiline",
-      },
-    ],
+    "comma-dangle": ["error", "always-multiline"],
 
     /**
      * 禁止在逗号前使用空格,要求在逗号后使用一个或多个空格
@@ -246,7 +234,7 @@ module.exports = {
     /**
      * 对注释周围是否要有空行没有要求
      */
-    "lines-around-comment": [ "off" ],
+    "lines-around-comment": ["off"],
 
     /**
      * 类的方法之间需要留有一个空行
@@ -391,7 +379,7 @@ module.exports = {
          * the list of arithmetic groups disallows mixing `%` and `**`
          * with other arithmetic operators.
          */
-        groups: [ ["%", "**"], ["%", "+"], ["%", "-"], ["%", "*"], ["%", "/"], ["/", "*"], ["&", "|", "<<", ">>", ">>>"], ["==", "!=", "===", "!=="], ["&&", "||"] ],
+        groups: [["%", "**"], ["%", "+"], ["%", "-"], ["%", "*"], ["%", "/"], ["/", "*"], ["&", "|", "<<", ">>", ">>>"], ["==", "!=", "===", "!=="], ["&&", "||"]],
         allowSamePrecedence: false,
       },
     ],
@@ -404,7 +392,7 @@ module.exports = {
     /**
      * 禁止连续赋值
      */
-    "no-multi-assign": [ "error" ],
+    "no-multi-assign": ["error"],
 
     /**
      * 最多连续空两行
@@ -555,7 +543,7 @@ module.exports = {
     /**
      * 对是否要在语句中需要填充空行无限制
      */
-    "padding-line-between-statements": [ "off" ],
+    "padding-line-between-statements": ["off"],
 
     /**
      * 禁止使用以对象字面量作为第一个参数的 Object.assign，优先使用对象扩展
