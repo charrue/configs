@@ -1,7 +1,4 @@
 module.exports = {
-  extends: [
-    "@charrue/vue-base",
-    "./essential.js",
-    "./vue2.js",
-  ],
+  parser: "vue-eslint-parser",
+  extends: ["plugin:vue/recommended"],
 };
