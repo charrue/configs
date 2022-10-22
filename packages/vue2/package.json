@@ -1,6 +1,6 @@
 {
   "name": "@charrue/eslint-config-vue2",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "基于@charrue/eslint-config-vue-base,添加了部分对vue2语法的规则配置",
   "keywords": [
     "eslint",
