@@ -1,7 +1,10 @@
 module.exports = {
-  extends: [
-    "@charrue/vue-base",
-    "./essential.js",
-    "./vue2.js",
-  ],
+  parser: "vue-eslint-parser",
+  extends: ["plugin:vue/vue3-recommended"],
+  globals: {
+    defineProps: "readonly",
+    defineEmits: "readonly",
+    defineExpose: "readonly",
+    withDefaults: "readonly",
+  },
 };

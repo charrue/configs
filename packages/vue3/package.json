@@ -1,27 +1,31 @@
 {
   "name": "@charrue/eslint-config-vue3",
   "version": "0.1.2",
-  "description": "基于@charrue/eslint-config-vue-base，添加了部分对vue3语法的规则配置",
-  "main": "index.js",
-  "homepage": "https://github.com/charrue/configs/blob/master/packages/vue3/README.md",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/charrue/configs.git",
-    "directory": "packages/vue3"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
+  "description": "基于@charrue/eslint-config-vue-base,添加了部分对vue3语法的规则配置",
   "keywords": [
     "eslint",
     "linter",
     "vue",
     "charrue"
   ],
-  "author": "ckangwen",
+  "homepage": "https://github.com/charrue/configs/blob/master/packages/vue3/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charrue/configs.git",
+    "directory": "packages/vue3"
+  },
   "license": "MIT",
+  "author": "ckangwen",
+  "main": "index.js",
   "dependencies": {
-    "@charrue/eslint-config-vue-base": "workspace:*"
+    "eslint-plugin-vue": "^8.2.0",
+    "vue-eslint-parser": "^8.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
