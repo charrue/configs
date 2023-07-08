@@ -1,7 +1,18 @@
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ["@charrue/base"],
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
+  plugins: ['unused-imports'],
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
+  extends: [
+    '@charrue/base',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'plugin:import/recommended',
+  ],
   settings: {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".d.ts"],
@@ -13,7 +24,40 @@ module.exports = {
     },
     "import/extensions": [".js", ".ts", ".mjs"],
   },
+  ignorePatterns: [
+    "*.min.*",
+    "CHANGELOG.md",
+    "dist",
+    "LICENSE*",
+    "output",
+    "coverage",
+    "public",
+    "temp",
+    "packages-lock.json",
+    "pnpm-lock.yaml",
+    "yarn.lock",
+    "__snapshots__",
+    "!.github",
+    "!.vitepress",
+    "!.vscode",
+  ],
   overrides: [
+    {
+      files: [
+        "*.config.[tj]s",
+        "pages/**/*.[tj]sx",
+        "src/pages/**/*.[tj]sx",
+
+        "src/views/**/*.[tj]sx",
+        "views/**/*.[tj]sx",
+
+        "src/store/**/*.[tj]s",
+        "store/**/*.[tj]s",
+      ],
+      rules: {
+        "import/no-default-export": "off",
+      },
+    },
     {
       files: ["*.d.ts"],
       rules: {
@@ -27,14 +71,22 @@ module.exports = {
       },
     },
     {
-      files: ["*.ts", "*.tsx"],
+      files: ["*.test.ts", "*.test.js", "*.spec.ts", "*.spec.js"],
       rules: {
-        "no-undef": "off",
-        "import/no-unresolved": "off",
+        "no-unused-expressions": "off",
       },
     },
   ],
   rules: {
+    // import
+    "import/named": "off",
+    "import/order": "off",
+    "import/first": "error",
+    "import/no-mutable-exports": "error",
+    "import/no-unresolved": "off",
+    "import/no-absolute-path": "off",
+    "import/no-default-export": "off",
+
     /**
      * 将重载的函数写在一起以增加代码可读性
      */
@@ -516,9 +568,14 @@ module.exports = {
      * 声明的变量必须被使用
      */
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      { vars: "all", args: "after-used", ignoreRestSiblings: true },
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_",
+      },
     ],
 
     /**
