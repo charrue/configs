@@ -25,13 +25,14 @@ module.exports = {
     require.resolve('prettier-plugin-tailwindcss'),
   ],
   importOrder: [
-    '^react',
-    '^vue',
+    "^(react/(.*)$)|^(react$)|^(react-native(.*)$)",
+    "^(next/(.*)$)|^(next$)",
+    "^(vue/(.*)$)|^(vue$)",
+    "<THIRD_PARTY_MODULES>",
     '<THIRD_PARTY_MODULES>',
     '<TYPES>',
     '<TYPES>^[.]',
     '',
-
     '^@(.*)/(.*)$',
     '',
     '^~/(.*)$',
